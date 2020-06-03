@@ -105,7 +105,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <h4 id="FileDate"><i class="fa fa-clock-o"></i> File 1, Sep 25, 2015.</h4>
   <a class="w3-button w3-light-grey">Edit<i class="w3-margin-left fa fa-pencil-square-o"></i></a>
   <a class="w3-button w3-light-grey">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-light-grey">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <a class="w3-button w3-light-grey" id="FileDelete" onclick="doDelete()">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
   <p id="FileText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
@@ -116,24 +116,24 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <h4><i class="fa fa-inbox"></i> All Files</h4>
     <hr>
     <h5>COMPSCI111</h5>
-    <a href="#" onclick="viewFile('1')">Penis.txt</a>
-    <br><a href="#" onclick="viewFile('2')">Vagina.txt</a>
-    <br><a href="#" onclick="viewFile('3')">Vagina.txt</a>
+    <a href="#" id="f1" onclick="viewFile('1')">Penis.txt</a>
+    <br><a href="#" id="f2" onclick="viewFile('2')">Vagina.txt</a>
+    <br><a href="#" id="f3" onclick="viewFile('3')">Vagina.txt</a>
     <hr>
     <h5>COMPSCI210</h5>
-    <a href="#" onclick="viewFile('4')">Penis.txt</a>
-    <br><a href="#" onclick="viewFile('5')">Vagina.txt</a>
+    <a href="#" id="f4" onclick="viewFile('4')">Penis.txt</a>
+    <br><a href="#" id="f5" onclick="viewFile('5')">Vagina.txt</a>
     <hr>
     <h5>ENGGEN120</h5>
-    <a href="#" onclick="viewFile('6')">Penis.txt</a>
-    <br><a href="#" onclick="viewFile('7')">Vagina.txt</a>
-    <br><a href="#" onclick="viewFile('8')">Vagina.txt</a>
-    <br><a href="#" onclick="viewFile('9')">Penis.txt</a>
-    <br><a href="#" onclick="viewFile('10')">Vagina.txt</a>
+    <a href="#" id="f6" onclick="viewFile('6')">Penis.txt</a>
+    <br><a href="#" id="f6" onclick="viewFile('7')">Vagina.txt</a>
+    <br><a href="#" id="f8" onclick="viewFile('8')">Vagina.txt</a>
+    <br><a href="#" id="f9" onclick="viewFile('9')">Penis.txt</a>
+    <br><a href="#" id="f10" onclick="viewFile('10')">Vagina.txt</a>
     <br><h5>COMPSCI111</h5>
     <hr>
     <h5>INFOSYS222</h5>
-    <a href="#" onclick="viewFile('11')">Penis.txt</a>
+    <a href="#" id="f11" onclick="viewFile('11')">Penis.txt</a>
     <hr>
   </div>
 
@@ -142,12 +142,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <h4><i class="fa fa-paper-plane"></i> Shared Files</h4>
     <hr>
     <h5>COMPSCI105 (<b>Daniel Shen</b>, Yasmin Swift, Connor King)</h5>
-    <a href="#" onclick="viewFile('12')">Penis.txt</a>
+    <a href="#" id="f12" onclick="viewFile('12')">Penis.txt</a>
     <hr>
     <h5>COMPSCI314 (<b>Jonathon Leng</b>, Jodie Dodd, Mollie Jennings, Archie Higgins)</h5>
-    <a href="#" onclick="viewFile('13')">Penis.txt</a>
-    <br><a href="#" onclick="viewFile('14')">Vagina.txt</a>
-    <br><a href="#" onclick="viewFile('15')">Vagina.txt</a>
+    <a href="#" id="f13" onclick="viewFile('13')">Penis.txt</a>
+    <br><a href="#" id="f14" onclick="viewFile('14')">Vagina.txt</a>
+    <br><a href="#" id="f15" onclick="viewFile('15')">Vagina.txt</a>
     <hr>
   </div>
 
@@ -156,7 +156,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <h4><i class="fa fa-hourglass-end"></i> Draft Files</h4>
     <hr>
     <h5>COMPSCI399</h5>
-    <a href="#" onclick="viewFile('16')">Vagina.txt</a>
+    <a href="#" id="f16" onclick="viewFile('16')">Vagina.txt</a>
   </div>
 
   <div id="trash1" class="w3-container file">
@@ -164,10 +164,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <h4><i class="fa fa-trash"></i> Trash Bin</h4>
     <hr>
     <h5>MATH150</h5>
-    <a href="#" onclick="viewFile('17')">Vagina.txt</a>
-    <br><a href="#" onclick="viewFile('18')">Vagina.txt</a>
-    <br><a href="#" onclick="viewFile('19')">Vagina.txt</a>
-    <br><a href="#" onclick="viewFile('20')">Vagina.txt</a>
+    <a href="#" id="f17" onclick="viewFile('17')">Vagina.txt</a>
+    <br><a href="#" id="f18" onclick="viewFile('18')">Vagina.txt</a>
+    <br><a href="#" id="f19" onclick="viewFile('19')">Vagina.txt</a>
+    <br><a href="#" id="f20" onclick="viewFile('20')">Vagina.txt</a>
     <hr>
   </div>
 
@@ -215,6 +215,8 @@ console.log('loaded');
 doShare('files1');
 w3_close();
 
+var delFile = 1;
+
 function newCourseChanged(){
   var select = document.getElementById("upload_course");
   var selectValue = select.options[select.selectedIndex].value;
@@ -229,17 +231,20 @@ function newCourseChanged(){
 
 
 function viewFile(id){
+
+  delFile = id;
+
   console.log("Loading view for file "+id)
   if(id == 1){
     viewFileProcess(
-            1,
+            id, 1,
             "Penis.txt",
             "Jun 03, 2021",
             "Fuck me in the bum hole"
     );
   }else if(id == 2){
     viewFileProcess(
-            3,
+            id, 3,
             "Vagina.txt",
             "Jun 01, 1997",
             "The female fun hole"
@@ -247,20 +252,27 @@ function viewFile(id){
   }
 }
 
-function viewFileProcess(id, name, date, text){
+function viewFileProcess(id, imgid, name, date, text){
   var src = "fileIcon3.png";
-  if(id ==1 ){
+  if(imgid ==1 ){
     src = "fileIcon3.png"
-  }else if(id == 2){
+  }else if(imgid == 2){
     src = "fileIcon5.png"
-  }else if(id == 3){
+  }else if(imgid == 3){
     src = "fileIcon2.png"
   }
   document.getElementById("FileImg").src = src;
   document.getElementById("FileName").innerText = name;
   document.getElementById("FileDate").innerText = name + ", " + date;
   document.getElementById("FileText").innerText = text;
+
   doShare("File");
+}
+
+function doDelete(){
+  alert("File deleted sucessfully");
+  document.getElementById("f"+delFile).style.display = "none";
+  doShare("files1");
 }
 
 </script>
