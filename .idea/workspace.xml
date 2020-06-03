@@ -17,22 +17,40 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="97" selection-start-line="22" selection-start-column="83" selection-end-line="22" selection-end-column="97" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#2;n#div#2;n#body#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="541">
+                  <caret line="259" column="3" lean-forward="true" selection-start-line="259" selection-start-column="3" selection-end-line="259" selection-end-column="3" />
+                  <folding>
+                    <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="603">
+                  <caret line="174" selection-start-line="174" selection-end-line="174" />
+                  <folding>
+                    <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -49,6 +67,8 @@
       <find>trash1</find>
       <find>draft f</find>
       <find>message</find>
+      <find>Assignment 3</find>
+      <find>upload you</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -119,7 +139,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591143025437</updated>
-      <workItem from="1591143028593" duration="7474000" />
+      <workItem from="1591143028593" duration="9624000" />
     </task>
     <task id="LOCAL-00001" summary="update index">
       <created>1591144062976</created>
@@ -149,18 +169,32 @@
       <option name="project" value="LOCAL" />
       <updated>1591165992876</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added your files,&#10;fixed upload section">
+      <created>1591223088986</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591223088986</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixed upload icon">
+      <created>1591223796733</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591223796733</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7474000" />
+    <option name="totallyTimeSpent" value="9624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="992" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24973376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -188,7 +222,9 @@
     <MESSAGE value="add upload button" />
     <MESSAGE value="fixed upload button, added trash bin" />
     <MESSAGE value="added draft files and trash bin" />
-    <option name="LAST_COMMIT_MESSAGE" value="added draft files and trash bin" />
+    <MESSAGE value="added your files,&#10;fixed upload section" />
+    <MESSAGE value="fixed upload icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed upload icon" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/fileIcon3.png">
@@ -205,12 +241,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="97" selection-start-line="22" selection-start-column="83" selection-end-line="22" selection-end-column="97" />
+        <state relative-caret-position="541">
+          <caret line="259" column="3" lean-forward="true" selection-start-line="259" selection-start-column="3" selection-end-line="259" selection-end-column="3" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
