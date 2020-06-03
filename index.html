@@ -19,7 +19,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <span><img src="https://www.w3schools.com/images/w3schools.png" style="width:30%"></span> template</a>
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Upload <i class="w3-padding fa fa-pencil"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id02').style.display='block'">Upload <i class="w3-padding fa fa-pencil"></i></a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share <i class="w3-padding fa fa-pencil"></i></a>
   <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo1" class="w3-hide w3-animate-left">
@@ -45,7 +45,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   </div>
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+  <a href="#trash" class="w3-bar-item w3-button" onclick=" console.log('trash mate'); doShare('trash1');w3_close();"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
 </nav>
 
 <!-- Modal that pops up when you click on "Share File" -->
@@ -81,16 +81,14 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <h2>Upload Your Shitty Group Assignment</h2>
     </div>
     <div class="w3-panel">
-      <label>To</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <label>From</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <label>File</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
+      <label>Select File</label>
+      <input type="file" name="fileToUpload" id="fileToUpload">
+      <br>
+      <label>Override Name Check</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="checkbox">
       <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a>
+        <a class="w3-button w3-red" onclick="document.getElementById('id02').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id02').style.display='none'">Upload  <i class="fa fa-paper-plane"></i></a>
       </div>
     </div>
   </div>
@@ -109,6 +107,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <img class="w3-round  w3-animate-top" src="./fileIcon3.png" style="width:20%;">
   <h5 class="w3-opacity">File 1</h5>
   <h4><i class="fa fa-clock-o"></i> File 1, Sep 27, 2015.</h4>
+  <a class="w3-button w3-light-grey" href="#">Edit<i class="w3-margin-left fa fa-pencil-square-o"></i></a>
   <a class="w3-button w3-light-grey" href="#">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
   <a class="w3-button w3-light-grey" href="#">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
@@ -122,6 +121,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <img class="w3-round w3-animate-top" src="./fileIcon5.png" style="width:20%;">
   <h5 class="w3-opacity">File 2</h5>
   <h4><i class="fa fa-clock-o"></i> File 2, Sep 25, 2015.</h4>
+  <a class="w3-button w3-light-grey">Edit<i class="w3-margin-left fa fa-pencil-square-o"></i></a>
   <a class="w3-button w3-light-grey">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
   <a class="w3-button w3-light-grey">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
@@ -129,16 +129,25 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 </div>
 
-<div id="File3" class="w3-container file">
-  <br>
-  <img class="w3-round w3-animate-top" src="./fileIcon2.png" style="width:20%;">
-  <h5 class="w3-opacity">File 3</h5>
-  <h4><i class="fa fa-clock-o"></i> File 3, Sep 23, 2015.</h4>
-  <a class="w3-button w3-light-grey">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-light-grey">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
-  <hr>
-  <p>Write for my darling</p>
-</div>
+  <div id="File3" class="w3-container file">
+    <br>
+    <img class="w3-round w3-animate-top" src="./fileIcon2.png" style="width:20%;">
+    <h5 class="w3-opacity">File 3</h5>
+    <h4><i class="fa fa-clock-o"></i> File 3, Sep 23, 2015.</h4>
+    <a class="w3-button w3-light-grey">Edit<i class="w3-margin-left fa fa-pencil-square-o"></i></a>
+    <a class="w3-button w3-light-grey">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
+    <a class="w3-button w3-light-grey">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
+    <hr>
+    <p>Write for my darling</p>
+  </div>
+
+  <div id="trash1" class="w3-container file">
+    <br>
+    <h4><i class="fa fa-trash"></i> Trash Bin</h4>
+    <hr>
+    <p>Aye Look... You Found yourself!</p>
+    <p>Put your first born here</p>
+  </div>
      
 </div>
 
