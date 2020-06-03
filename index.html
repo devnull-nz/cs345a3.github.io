@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Assignment 3 Base code Adapted from W3.CSS Template</title>
 <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 .w3-bar-block .w3-bar-item {padding: 16px}
 </style>
-</html>
+</head>
 <body>
 
 <!-- Side Navigation -->
@@ -19,7 +19,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <span><img src="https://www.w3schools.com/images/w3schools.png" style="width:30%"></span> template</a>
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Upload <i class="w3-padding fa fa-pencil"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share <i class="w3-padding fa fa-pencil"></i></a>
   <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo1" class="w3-hide w3-animate-left">
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File1');w3_close();" id="firstTab">
@@ -38,7 +39,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File3');w3_close();">
       <div class="w3-container">
         <img class="w3-round w3-margin-right" src="./fileIcon2.png" style="width:15%;"><span class="w3-opacity w3-large">File 3</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <p>Write for me darling</p>
       </div>
     </a>
   </div>
@@ -52,7 +53,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <div class="w3-modal-content w3-animate-zoom">
     <div class="w3-container w3-padding w3-red">
        <span onclick="document.getElementById('id01').style.display='none'"
-       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+             class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
       <h2>Share File</h2>
     </div>
     <div class="w3-panel">
@@ -65,8 +66,32 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
       <div class="w3-section">
         <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a> 
-      </div>    
+        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal that pops up when you click on "upload File" -->
+<div id="id02" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding w3-red">
+       <span onclick="document.getElementById('id02').style.display='none'"
+             class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+      <h2>Upload Your Shitty Group Assignment</h2>
+    </div>
+    <div class="w3-panel">
+      <label>To</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="text">
+      <label>From</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="text">
+      <label>File</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="text">
+      <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
+      <div class="w3-section">
+        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a>
+      </div>
     </div>
   </div>
 </div>
@@ -87,9 +112,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <a class="w3-button w3-light-grey" href="#">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
   <a class="w3-button w3-light-grey" href="#">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
-  
+
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
- 
+
 </div>
 
 <div id="File2" class="w3-container file">
@@ -112,7 +137,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <a class="w3-button w3-light-grey">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
   <a class="w3-button w3-light-grey">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
- 
+  <p>Write for my darling</p>
 </div>
      
 </div>
