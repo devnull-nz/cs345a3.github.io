@@ -19,7 +19,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <span><img src="https://www.w3schools.com/images/w3schools.png" style="width:30%"></span> template</a>
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-blue w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id02').style.display='block'">Upload <i class="w3-padding fa fa-pencil"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-blue w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id02').style.display='block'">Upload <i class="w3-padding fa fa-upload"></i></a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-red w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share <i class="w3-padding fa fa-pencil"></i></a>
 
   <a href="#files" class="w3-bar-item w3-button" onclick=" console.log('shared mate'); doShare('files1');w3_close();"><i class="fa fa-inbox w3-margin-right"></i>Your Files</a>
@@ -56,7 +56,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message...">
       <div class="w3-section">
         <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'; alert('Share successful!');">Share  <i class="fa fa-paper-plane"></i></a>
+        <a class="w3-button w3-green w3-right" onclick="document.getElementById('id01').style.display='none'; alert('Share successful!');">Share  <i class="fa fa-paper-plane"></i></a>
       </div>
     </div>
   </div>
@@ -65,9 +65,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <!-- Modal that pops up when you click on "upload File" -->
 <div id="id02" class="w3-modal" style="z-index:4">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-red">
+    <div class="w3-container w3-padding w3-blue">
        <span onclick="document.getElementById('id02').style.display='none'"
-             class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+             class="w3-button w3-blue w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
       <h2>Upload Your Shitty Group Assignment</h2>
     </div>
     <div class="w3-panel">
@@ -83,7 +83,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <input id="override_check" type="checkbox">
       <div class="w3-section">
         <a class="w3-button w3-red" onclick="document.getElementById('id02').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id02').style.display='none'; alert('Upload successful!');">Upload  <i class="fa fa-paper-plane"></i></a>
+        <a class="w3-button w3-green w3-right" onclick="document.getElementById('id02').style.display='none'; alert('Upload successful!');">Upload  <i class="fa fa-paper-plane"></i></a>
       </div>
     </div>
   </div>
@@ -141,6 +141,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <h4><i class="fa fa-trash"></i> Trash Bin</h4>
     <hr>
     <p>Aye Look... You Found yourself!</p>
+    <h5>MATH150</h5>
+    <hr>
   </div>
 
   <div id="draft1" class="w3-container file">
@@ -156,6 +158,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <h4><i class="fa fa-paper-plane"></i> Shared Files</h4>
     <hr>
     <p>Come find the garbage other people have given you!</p>
+    <h5>COMPSCI105 (<b>Daniel Shen</b>, Yasmin Swift, Connor King)</h5>
+    <hr>
+    <h5>COMPSCI314 (<b>Jonathon Leng</b>, Jodie Dodd, Mollie Jennings, Archie Higgins)</h5>
+    <hr>
   </div>
 
   <div id="files1" class="w3-container file">
