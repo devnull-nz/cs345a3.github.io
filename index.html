@@ -43,8 +43,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       </div>
     </a>
   </div>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
+  <a href="#shared" class="w3-bar-item w3-button" onclick=" console.log('shared mate'); doShare('shared1');w3_close();"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
+  <a href="#draft" class="w3-bar-item w3-button" onclick=" console.log('draft mate'); doShare('draft1');w3_close();"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
   <a href="#trash" class="w3-bar-item w3-button" onclick=" console.log('trash mate'); doShare('trash1');w3_close();"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
 </nav>
 
@@ -57,16 +57,26 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <h2>Share File</h2>
     </div>
     <div class="w3-panel">
-      <label>To</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <label>From</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
+      <label>Share to group</label>
+      <br>
+      <select><option selected>Choose one</option><option>COMPSCI111</option><option>COMPSCI210</option><option>ENGGEN120</option><option>INFOSYS222</option></select>
+      <br>
+      <label>Permissions</label>
+      <br>
+      <input type="radio" id="r1" name="share_perm" checked>
+      <label for="r1">None</label><br>
+      <input type="radio" id="r2" name="share_perm">
+      <label for="r2">Read</label><br>
+      <input type="radio" id="r3" name="share_perm">
+      <label for="r3">Edit</label><br>
+      <input type="radio" id="r4" name="share_perm">
+      <label for="r4">Full</label>
       <label>File</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
+      <br>
+      <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message... For group assignment 3">
       <div class="w3-section">
         <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a>
+        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'; alert('Share successful!');">Share  <i class="fa fa-paper-plane"></i></a>
       </div>
     </div>
   </div>
@@ -84,11 +94,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <label>Select File</label>
       <input type="file" name="fileToUpload" id="fileToUpload">
       <br>
-      <label>Override Name Check</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="checkbox">
+      <label for="override_check">Override Name Check</label>
+      <input id="override_check" type="checkbox">
       <div class="w3-section">
         <a class="w3-button w3-red" onclick="document.getElementById('id02').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id02').style.display='none'">Upload  <i class="fa fa-paper-plane"></i></a>
+        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id02').style.display='none'; alert('Upload successful!');">Upload  <i class="fa fa-paper-plane"></i></a>
       </div>
     </div>
   </div>
@@ -147,6 +157,21 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <hr>
     <p>Aye Look... You Found yourself!</p>
     <p>Put your first born here</p>
+  </div>
+
+  <div id="draft1" class="w3-container file">
+    <br>
+    <h4><i class="fa fa-hourglass-end"></i> Draft Files</h4>
+    <hr>
+    <p>A place for your half arse shit!</p>
+    <p>And first born child</p>
+  </div>
+
+  <div id="shared1" class="w3-container file">
+    <br>
+    <h4><i class="fa fa-paper-plane"></i> Shared Files</h4>
+    <hr>
+    <p>Come find the garbage you've given to everyone else!</p>
   </div>
      
 </div>
