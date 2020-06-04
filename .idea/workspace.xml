@@ -23,10 +23,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="619">
-                  <caret line="784" column="55" lean-forward="true" selection-start-line="784" selection-start-column="55" selection-end-line="784" selection-end-column="55" />
+                <state relative-caret-position="488">
+                  <caret line="166" column="46" selection-start-line="166" selection-start-column="46" selection-end-line="166" selection-end-column="46" />
                   <folding>
                     <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -39,10 +40,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+                <state relative-caret-position="415">
+                  <caret line="236" column="52" lean-forward="true" selection-start-line="236" selection-start-column="20" selection-end-line="236" selection-end-column="52" />
                   <folding>
-                    <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -67,10 +68,13 @@
       <find>draft f</find>
       <find>message</find>
       <find>Assignment 3</find>
-      <find>upload you</find>
       <find>share</find>
-      <find>share file</find>
       <find>fileN</find>
+      <find>share file</find>
+      <find>upload you</find>
+      <find>upload</find>
+      <find>FileNa</find>
+      <find>f21</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,7 +145,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591143025437</updated>
-      <workItem from="1591143028593" duration="12564000" />
+      <workItem from="1591143028593" duration="16844000" />
     </task>
     <task id="LOCAL-00001" summary="update index">
       <created>1591144062976</created>
@@ -199,11 +203,25 @@
       <option name="project" value="LOCAL" />
       <updated>1591226054596</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added fake file data">
+      <created>1591228227829</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591228227830</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added new course function">
+      <created>1591239950903</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1591239950903</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12564000" />
+    <option name="totallyTimeSpent" value="16844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="992" extended-state="0" />
@@ -243,7 +261,9 @@
     <MESSAGE value="fixed upload icon" />
     <MESSAGE value="added files to folders" />
     <MESSAGE value="working delete function" />
-    <option name="LAST_COMMIT_MESSAGE" value="working delete function" />
+    <MESSAGE value="added fake file data" />
+    <MESSAGE value="added new course function" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new course function" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/fileIcon5.png">
@@ -260,10 +280,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        <state relative-caret-position="488">
+          <caret line="166" column="46" selection-start-line="166" selection-start-column="46" selection-end-line="166" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
