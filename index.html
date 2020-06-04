@@ -20,6 +20,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-blue w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id02').style.display='block'">Upload <i class="w3-padding fa fa-upload"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-red w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id03').style.display='block'">Add Course <i class="w3-padding fa fa-plus"></i></a>
   <!---<a href="javascript:void(0)" class="w3-bar-item w3-button w3-red w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share <i class="w3-padding fa fa-pencil"></i></a>
   --->
   <a href="#files" class="w3-bar-item w3-button" onclick=" console.log('shared mate'); doShare('files1');w3_close();"><i class="fa fa-inbox w3-margin-right"></i>Your Files</a>
@@ -89,6 +90,25 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   </div>
 </div>
 
+<div id="id03" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding w3-blue">
+       <span onclick="document.getElementById('id02').style.display='none'"
+             class="w3-button w3-blue w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+      <h2>Create New Course</h2>
+    </div>
+    <div class="w3-panel">
+      <label fpr="newCourseName">Course Name</label>
+      <br>
+      <input type="text" name="newCourseName" id="newCourseName" placeholder="RANDOM101">
+      <div class="w3-section">
+        <a class="w3-button w3-red" onclick="document.getElementById('id03').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+        <a class="w3-button w3-green w3-right" onclick="document.getElementById('id03').style.display='none'; newCourse()">Create  <i class="fa fa-paper-plane"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Overlay effect when opening the side navigation on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
 
@@ -127,7 +147,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <hr>
     <h5>ENGGEN120</h5>
     <a href="#" id="f6" onclick="viewFile('6')">ivory.odt</a>
-    <br><a href="#" id="f6" onclick="viewFile('7')">retire.json</a>
+    <br><a href="#" id="f7" onclick="viewFile('7')">retire.json</a>
     <br><a href="#" id="f8" onclick="viewFile('8')">decrease.csv</a>
     <br><a href="#" id="f9" onclick="viewFile('9')">behead.docx</a>
     <br><a href="#" id="f10" onclick="viewFile('10')">perforate.doc</a>
@@ -784,6 +804,13 @@ function shareFile(){
   var name = document.getElementById("FileName").innerText;
   document.getElementById('ShareFileName').innerText = "Share '" + name + "'";
   document.getElementById('id01').style.display='block';
+}
+
+function newCourse(){
+  var courseName = document.getElementById("newCourseName").value;
+  document.getElementById("files1").innerHTML += "<h5>"+courseName+"</h5>No Files<hr>";
+  doShare("files1");
+
 }
 
 </script>
