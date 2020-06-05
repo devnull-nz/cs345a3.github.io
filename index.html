@@ -70,8 +70,7 @@
       <h2 id="ShareFileName">Share File</h2>
     </div>
     <div class="w3-panel">
-      <label>Share to group</label>
-      <br />
+      <h6>Share to group</h6>
       <select class="group68model">
         <option selected>Choose one</option>
         <option>COMPSCI111</option>
@@ -79,9 +78,9 @@
         <option>ENGGEN120</option>
         <option>INFOSYS222</option>
       </select>
+        <br>
       <br />
-      <label>Permissions</label>
-      <br />
+      <h6>Permissions</h6>
       <input type="radio" id="r1" name="share_perm" checked />
       <label for="r1">None</label><br />
       <input type="radio" id="r2" name="share_perm" />
@@ -90,8 +89,8 @@
       <label for="r3">Edit</label><br />
       <input type="radio" id="r4" name="share_perm" />
       <label for="r4">Full</label>
-      <label>File</label>
       <br />
+        <br>
       <input class="w3-input w3-border w3-margin-bottom group68button" style="height: 150px;" placeholder="Message..." />
       <div class="w3-section">
         <a class="w3-button w3-red group68button" onclick="document.getElementById('id01').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
@@ -109,11 +108,10 @@
       <h2>Upload File</h2>
     </div>
     <div class="w3-panel">
-      <label>Select File</label>
+      <h6>Select File</h6>
       <input type="file" name="fileToUpload" id="fileToUpload" />
-      <br />
-      <label>Course</label>
-      <br />
+
+      <h6>Course</h6>
       <select id="upload_course" class="group68model" onchange="newCourseChanged();">
         <option selected value="0">Choose one</option>
         <option value="-1">New Course</option>
@@ -124,10 +122,10 @@
       </select>
       <div id="upload_course_new" hidden>
         <br />
-        Course Name: <input id="new_course_name" />
+        Course Name: <input id="new_course_name" class="group68button"/>
       </div>
       <br />
-      <label for="override_check">Override Name Check</label>
+      <h6>Override Name Check</h6>
       <input id="override_check" type="checkbox" />
       <div class="w3-section">
         <a class="w3-button w3-red group68button" onclick="document.getElementById('id02').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
@@ -144,8 +142,7 @@
             <h2>Create New Course</h2>
         </div>
         <div class="w3-panel">
-            <label fpr="newCourseName">Course Name</label>
-            <br />
+            <h6>Course Name</h6>
             <input type="text" name="newCourseName" class="group68model" id="newCourseName" placeholder="RANDOM101" />
             <div class="w3-section">
                 <a class="w3-button w3-red group68button" onclick="document.getElementById('id03').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
@@ -162,9 +159,8 @@
             <h2>Invite New User To <span id="newUserPopUpCourseName"></span></h2>
         </div>
         <div class="w3-panel">
-            <label for="newCourseName">Connect by email</label>
-            <br />
-            <input type="email" id="newUserCourseEmail" class="group68model" placeholder="jbon007@aucklanduni.ac.nz" />
+            <h5>Connect by email</h5>
+            <input type="email" id="newUserCourseEmail" class="group68model" placeholder="jbon007@aucklanduni.ac.nz" max="200"/>
             <div class="w3-section">
                 <a class="w3-button w3-red group68button" onclick="document.getElementById('id04').style.display='none';">Cancel <i class="fa fa-remove"></i></a>
                 <a class="w3-button w3-right group68button" onclick="doNewUser()">Invite <i class="fa fa-paper-plane"></i></a>
@@ -287,7 +283,7 @@
       <div>
         <br><br><br><br><hr>
         <h5>COMPSCI210</h5>
-          <h6><a href="#" class="w3-button w3-white group68button" onclick="newUser('COMPSCI20', 'COMPSCI210_users')">Invite User</a> <span id="COMPSCI210_users"></span></h6>
+          <h6><a href="#" class="w3-button w3-white group68button" onclick="newUser('COMPSCI210', 'COMPSCI210_users')">Invite User</a> <span id="COMPSCI210_users"></span></h6>
         <span>
        <div id="f4" class="customSplit roundedCorners">
         <center>
@@ -439,7 +435,7 @@
           </span>
       </div>
 
-      <br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><hr>
 
       <div>
     <h5>COMPSCI314 (<b>Jonathon Leng</b>, Jodie Dodd, Mollie Jennings, Archie Higgins)</h5>
@@ -471,7 +467,7 @@
     <br />
     <h4><i class="fa fa-hourglass-end"></i> Draft Files</h4>
       <div>
-          <h5>COMPSCI399</h5>
+          <h5>COMPSCI314</h5>
           <span>
               <div id="f16"class="customSplit roundedCorners">
                 <center>
