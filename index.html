@@ -21,6 +21,26 @@
       padding: 16px;
     }
   </style>
+    <style>
+        /* Used for split screen at top o your files screen*/
+        .customSplit {
+            float: left;
+            width: 25%;
+        }
+        /* Rounds the corners */
+        .roundedCorners {
+            border: 2px solid #f5f5f5;
+            border-radius: 25px;
+        }
+        .group68button{
+            border: 2px solid #f5f5f5;
+            border-radius: 25px;
+        }
+        .group68model{
+            border: 2px solid #f5f5f5;
+            border-radius: 25px;
+        }
+    </style>
 </head>
 <body>
 <!-- Side Navigation -->
@@ -29,11 +49,13 @@
     <i class="fa fa-edit"></i> &nbsp; Group 68 File Server <br />
     based on <span><img src="https://www.w3schools.com/images/w3schools.png" style="width: 30%;" /></span> template
   </a>
-  <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-blue w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id02').style.display='block'">Upload <i class="w3-padding fa fa-upload"></i></a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-red w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id03').style.display='block'">Add Course <i class="w3-padding fa fa-plus"></i></a>
+  <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a><br>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-blue w3-button w3-hover-black w3-left-align group68button" onclick="document.getElementById('id02').style.display='block'">Upload <i class="w3-padding fa fa-upload"></i></a>
+    <br>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-red  w3-button w3-hover-black w3-left-align group68button" onclick="document.getElementById('id03').style.display='block'">Add Course <i class="w3-padding fa fa-plus"></i></a>
   <!---<a href="javascript:void(0)" class="w3-bar-item w3-button w3-red w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share <i class="w3-padding fa fa-pencil"></i></a>
  --->
+    <br>
   <a href="#files" class="w3-bar-item w3-button" onclick=" console.log('shared mate'); doShare('files1');w3_close();"><i class="fa fa-inbox w3-margin-right"></i>Your Files</a>
   <a href="#shared" class="w3-bar-item w3-button" onclick=" console.log('shared mate'); doShare('shared1');w3_close();"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
   <a href="#draft" class="w3-bar-item w3-button" onclick=" console.log('draft mate'); doShare('draft1');w3_close();"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
@@ -42,15 +64,15 @@
 
 <!-- Modal that pops up when you click on "Share File" -->
 <div id="id01" class="w3-modal" style="z-index: 4;">
-  <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-red">
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom group68model">
+    <div class="w3-container w3-padding">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge group68button"><i class="fa fa-remove"></i></span>
       <h2 id="ShareFileName">Share File</h2>
     </div>
     <div class="w3-panel">
       <label>Share to group</label>
       <br />
-      <select>
+      <select class="group68model">
         <option selected>Choose one</option>
         <option>COMPSCI111</option>
         <option>COMPSCI210</option>
@@ -70,10 +92,10 @@
       <label for="r4">Full</label>
       <label>File</label>
       <br />
-      <input class="w3-input w3-border w3-margin-bottom" style="height: 150px;" placeholder="Message..." />
+      <input class="w3-input w3-border w3-margin-bottom group68button" style="height: 150px;" placeholder="Message..." />
       <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-green w3-right" onclick="document.getElementById('id01').style.display='none'; alert('Share successful!');">Share <i class="fa fa-paper-plane"></i></a>
+        <a class="w3-button w3-red group68button" onclick="document.getElementById('id01').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
+        <a class="w3-button  w3-right group68button" onclick="document.getElementById('id01').style.display='none'; alert('Share successful!');">Share <i class="fa fa-paper-plane"></i></a>
       </div>
     </div>
   </div>
@@ -81,10 +103,10 @@
 
 <!-- Modal that pops up when you click on "upload File" -->
 <div id="id02" class="w3-modal" style="z-index: 4;">
-  <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-blue">
-      <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-blue w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
-      <h2>Upload Your Shitty Group Assignment</h2>
+  <div class="w3-modal-content w3-animate-zoom group68model">
+    <div class="w3-container w3-padding w3-blue group68model">
+      <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-blue w3-right w3-xxlarge group68button"><i class="fa fa-remove"></i></span>
+      <h2>Upload File</h2>
     </div>
     <div class="w3-panel">
       <label>Select File</label>
@@ -92,7 +114,7 @@
       <br />
       <label>Course</label>
       <br />
-      <select id="upload_course" onchange="newCourseChanged();">
+      <select id="upload_course" class="group68model" onchange="newCourseChanged();">
         <option selected value="0">Choose one</option>
         <option value="-1">New Course</option>
         <option value="1">COMPSCI111</option>
@@ -108,29 +130,47 @@
       <label for="override_check">Override Name Check</label>
       <input id="override_check" type="checkbox" />
       <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id02').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-green w3-right" onclick="document.getElementById('id02').style.display='none'; alert('Upload successful!');">Upload <i class="fa fa-paper-plane"></i></a>
+        <a class="w3-button w3-red group68button" onclick="document.getElementById('id02').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
+        <a class="w3-button w3-right group68button" onclick="document.getElementById('id02').style.display='none'; alert('Upload successful!');">Upload <i class="fa fa-paper-plane"></i></a>
       </div>
     </div>
   </div>
 </div>
 
 <div id="id03" class="w3-modal" style="z-index: 4;">
-  <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-blue">
-      <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-blue w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
-      <h2>Create New Course</h2>
+    <div class="w3-modal-content w3-animate-zoom group68model">
+        <div class="w3-container w3-padding group68model">
+            <span onclick="document.getElementById('id023').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge group68button"><i class="fa fa-remove"></i></span>
+            <h2>Create New Course</h2>
+        </div>
+        <div class="w3-panel">
+            <label fpr="newCourseName">Course Name</label>
+            <br />
+            <input type="text" name="newCourseName" class="group68model" id="newCourseName" placeholder="RANDOM101" />
+            <div class="w3-section">
+                <a class="w3-button w3-red group68button" onclick="document.getElementById('id03').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
+                <a class="w3-button w3-right group68button" onclick="document.getElementById('id03').style.display='none'; newCourse()">Create <i class="fa fa-paper-plane"></i></a>
+            </div>
+        </div>
     </div>
-    <div class="w3-panel">
-      <label fpr="newCourseName">Course Name</label>
-      <br />
-      <input type="text" name="newCourseName" id="newCourseName" placeholder="RANDOM101" />
-      <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id03').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-green w3-right" onclick="document.getElementById('id03').style.display='none'; newCourse()">Create <i class="fa fa-paper-plane"></i></a>
-      </div>
+</div>
+
+<div id="id04" class="w3-modal Invite" style="z-index: 4;">
+    <div class="w3-modal-content w3-animate-zoom group68model">
+        <div class="w3-container w3-padding group68model">
+            <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge group68button"><i class="fa fa-remove"></i></span>
+            <h2>Invite New User To <span id="newUserPopUpCourseName"></span></h2>
+        </div>
+        <div class="w3-panel">
+            <label for="newCourseName">Connect by email</label>
+            <br />
+            <input type="email" id="newUserCourseEmail" class="group68model" placeholder="jbon007@aucklanduni.ac.nz" />
+            <div class="w3-section">
+                <a class="w3-button w3-red group68button" onclick="document.getElementById('id04').style.display='none';">Cancel <i class="fa fa-remove"></i></a>
+                <a class="w3-button w3-right group68button" onclick="doNewUser()">Invite <i class="fa fa-paper-plane"></i></a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!-- Overlay effect when opening the side navigation on small screens -->
@@ -158,19 +198,6 @@
   </div>
 
   <div id="files1" class="w3-container file">
-    <style>
-      /* Used for split screen at top o your files screen*/
-      .customSplit {
-        float: left;
-        width: 25%;
-      }
-
-      /* Rounds the corners */
-      .roundedCorners {
-        border: 2px solid #f5f5f5;
-        border-radius: 25px;
-      }
-    </style>
     <br />
     <div id="recentFile">
       <h4><i class="fa fa-inbox"></i> Recent Files</h4>
@@ -223,10 +250,14 @@
     </div>
 
     <br><br><br><br><br>
+      <hr>
     <h4><i class="fa fa-inbox"></i> All Files</h4>
     <div id="allFiles">
       <div>
         <h5>COMPSCI111</h5>
+
+          <h6><a href="#" class="w3-button w3-white group68button" onclick="newUser('COMPSCI111', 'COMPSCI111_users')">Invite User</a> <span id="COMPSCI111_users">Daniel Shen</span></h6>
+
         <span>
        <div id="f3" class="customSplit roundedCorners">
         <center>
@@ -254,8 +285,9 @@
       <br />
 
       <div>
-        <br><br><br><br>
+        <br><br><br><br><hr>
         <h5>COMPSCI210</h5>
+          <h6><a href="#" class="w3-button w3-white group68button" onclick="newUser('COMPSCI20', 'COMPSCI210_users')">Invite User</a> <span id="COMPSCI210_users"></span></h6>
         <span>
        <div id="f4" class="customSplit roundedCorners">
         <center>
@@ -276,9 +308,10 @@
       <br />
 
       <div>
-        <br><br><br><br>
+        <br><br><br><br><hr>
         <h5>ENGGEN120</h5>
-        <span>
+          <h6><a href="#" class="w3-button w3-white group68button" onclick="newUser('ENGGEN120', 'ENGGEN120_users')">Invite User</a> <span id="ENGGEN120_users">Jonathon Leng</span></h6>
+            <span>
        <div id="f9" class="customSplit roundedCorners">
         <center>
 
@@ -321,8 +354,9 @@
       </div>
       <br />
       <div>
-        <br><br><br><br>
+        <br><br><br><br><hr>
         <h5>INFOSYS222</h5>
+          <h6><a href="#" class="w3-button w3-white group68button" onclick="newUser('INFOSYS222', 'INFOSYS222_users')">Invite User</a> <span id="INFOSYS222_users"></span></h6>
         <span>
         <div id="f11" class="customSplit roundedCorners">
           <center>
@@ -334,8 +368,9 @@
         </span>
       </div>
       <br />
-      <div>
-        <br><br><br><br>
+
+      <div><br>
+        <br><br><br><br><hr>
         <h5>Personal</h5>
         <span>
        <div id="f24" class="customSplit roundedCorners">
@@ -1271,6 +1306,36 @@
     document.getElementById("allFiles").innerHTML += "<h5>" + courseName + "</h5>No Files<hr>";
     doShare("files1");
   }
+
+  var addNewUserCourseName = "";
+  var addNewUserCourseID = "";
+
+  function newUser(courseName, courseID){
+      console.log("So you want to add a new user aye?");
+      addNewUserCourseName = courseName;
+      addNewUserCourseID = courseID;
+
+      document.getElementById("newUserPopUpCourseName").innerText = courseName;
+      document.getElementById('id04').style.display='block';
+
+    return false;
+  }
+
+  function doNewUser(){
+      console.log("Yea yea yea, i'm adding your new user now");
+
+      var curText = document.getElementById(addNewUserCourseID).innerText;
+      if(curText == null || curText == ""){
+          console.log("congrats, this is the first person you are adding to this course")
+          document.getElementById(addNewUserCourseID).innerText = document.getElementById('newUserCourseEmail').value;
+      }else{
+          console.log("stink, your not alone");
+          document.getElementById(addNewUserCourseID).innerText += ', ' + document.getElementById('newUserCourseEmail').value;
+      }
+
+      document.getElementById('id04').style.display='none';
+  }
+
 </script>
 </body>
 </html>
