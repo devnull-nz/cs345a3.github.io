@@ -25,7 +25,8 @@
         /* Used for split screen at top o your files screen*/
         .customSplit {
             float: left;
-            width: 25%;
+            width: 200px;
+            margin: 5px;
         }
         /* Rounds the corners */
         .roundedCorners {
@@ -38,8 +39,7 @@
             border-radius: 25px;
         }
         .group68model{
-            border: 2px solid #f5f5f5;
-            border-radius: 25px;
+            border-radius: 10px;
         }
 
         .nonRoundedEdgeButton {
@@ -48,9 +48,10 @@
 
         .input-field {
             height: 40px;
-            border-radius: 0;
-            width: 400px;
+            border-radius: 5px;
+            width: 100%;
             padding: 5px;
+            border: 2px solid lightgrey;
         }
 
         header {
@@ -83,17 +84,57 @@
         .logo h1 {
           font-size: 28px;
         }
+
+        .logo a {
+          text-decoration: none;
+        }
+
+        .logo a:visited, .logo a:active, .logo a:focus {
+          color: #fff !important;
+        }
+
+        .inviteButtonRight {
+          display: inline-block;
+          float: right;
+        }
+
+        .inviteButtonRight button {
+          margin: 15px 0;
+        }
+
+        .groupName {
+            display: inline-block;
+        }
+
+        .inviteGroupBox hr {
+          margin: 5px;
+        }
+
+        .disclaimerDetails {
+          margin-top: 100px;
+        }
+        .disclaimerRight {
+            width: 50%;
+            display: inline-block;
+            float: right;
+            text-align: right;
+            padding-top: 50px;
+        }
+        .disclaimerLeft {
+            width: 50%;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
 
 <header>
   <div class="logo">
-    <h1>UOA FILE SYSTEM
+    <a href="#files" onclick="doShare('files1');w3_close();"><h1>UOA FILE SYSTEM</h1></a>
   </div>
 
   <div class="login-details">
-    <p>Logged In Joe Doe</p>
+    <p>Logged In Joe Doe (<a href="#">Logout</a>)</p>
   </div>
 </header>
 <!-- Side Navigation -->
@@ -215,8 +256,28 @@
         <div class="w3-panel">
             <h5>Connect by email</h5>
             <input type="email" id="newUserCourseEmail" class="group68model input-field" placeholder="jbon007@aucklanduni.ac.nz" max="200"/>
-            <br><br>Share this link for easy access:
-            <Br><a href="#" id="invitePersonLink"></a>
+            <br><br><h5>Connect by group</h5>
+            <div class="inviteGroupBox">
+              <div class="groupName">
+                <p>Compsci 345 Group 68</p>
+              </div>
+              <div class="inviteButtonRight">
+                <button>Invite</button>
+              </div>
+              <hr>
+            </div>
+            <div class="inviteGroupBox">
+              <div class="groupName">
+                <p>Compsci 373 Group 62</p>
+              </div>
+              <div class="inviteButtonRight">
+                <button>Invite</button>
+              </div>
+              <hr>
+            </div>
+              <br><br>Share this link for easy access:<br/>
+              <a href="#" id="invitePersonLink"></a>
+            </div>
             <div class="w3-section">
                 <a class="w3-button w3-red group68button" onclick="document.getElementById('id04').style.display='none';">Cancel <i class="fa fa-remove"></i></a>
                 <a class="w3-button w3-right group68button" onclick="doNewUser()">Invite <i class="fa fa-paper-plane"></i></a>
@@ -533,14 +594,20 @@
       </div>
     </div>
     <br><br><br><br><br><br><br><br>
-    <a href="#" class="w3-bar-item w3-button w3-blue w3-button w3-hover-black w3-left-align group68button" onclick="doShare('disclaimer1')">Disclaimer</a>
-      <br>
-      The University of Auckland
-      <br>
-      Computer Science 345 - S1 2020 - Assignment 3
-      <br>
-      Murray Freeth-Edwards, Daniel Shen, Jonathon Leng
-      <br><br><br>
+    <div class="disclaimerDetails">
+      <div class="disclaimerLeft">
+        <br>
+        The University of Auckland
+        <br>
+        Computer Science 345 - S1 2020 - Assignment 3
+        <br>
+        Murray Freeth-Edwards, Daniel Shen, Jonathon Leng
+        <br><br><br>
+      </div>
+      <div class="disclaimerRight">
+        <a href="#" class="w3-bar-item w3-button w3-blue w3-button w3-hover-black w3-left-align group68button" onclick="doShare('disclaimer1')">Disclaimer</a>
+      </div>
+    </div>
   </div>
 
   <div id="shared1" class="w3-container file">
