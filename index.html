@@ -1474,7 +1474,8 @@
     function doPublish(){
         doc16published = true
         console.log("publishing bad.java");
-        document.getElementById("cs314span").innerHTML += document.getElementById("cs314DraftSpan").innerHTML;
+        var curHTML = document.getElementById("cs314span").innerHTML
+        document.getElementById("cs314span").innerHTML = document.getElementById("cs314DraftSpan").innerHTML + curHTML;
         document.getElementById("cs314DraftDiv").innerHTML = "";
         alert("bad.java published to COMPSCI314")
         doShare("shared1");
