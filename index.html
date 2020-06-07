@@ -92,6 +92,8 @@
       <br />
         <br>
       <input class="w3-input w3-border w3-margin-bottom group68button" style="height: 150px;" placeholder="Message..." />
+        <br> Link:
+        <br> <a id="shareLink" href="#"></a>
       <div class="w3-section">
         <a class="w3-button w3-red group68button" onclick="document.getElementById('id01').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
         <a class="w3-button  w3-right group68button" onclick="document.getElementById('id01').style.display='none'; alert('Share successful!');">Share <i class="fa fa-paper-plane"></i></a>
@@ -183,7 +185,7 @@
     <h5 class="w3-opacity" id="FileName">File 1</h5>
     <h4 id="FileDate"><i class="fa fa-clock-o"></i> File 1, Sep 25, 2015.</h4>
     <a class="w3-button w3-light-grey" onclick="alert('The edit function is not within the scope of the home page')">Edit<i class="w3-margin-left fa fa-pencil-square-o"></i></a>
-    <a class="w3-button w3-light-grey" onclick="shareFile()">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
+    <a id="viewFileShareButton" class="w3-button w3-light-grey" onclick="shareFile()">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
     <a class="w3-button w3-light-grey" id="FileDelete" onclick="doDelete()">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
     <hr />
     <p id="FileText">
@@ -201,7 +203,7 @@
       <span style="vertical-align: bottom;">
       <div id="f21.1" class="customSplit roundedCorners">
        <center>
-        <a href="#uoa_acceptance_letter.pdf"  onclick="viewFile('21')">
+        <a href="#uoa_acceptance_letter.pdf"  onclick="viewFile('21', true)">
          <img src="uoa_logo.svg" width="20%" />
          <br />
          UoA Acceptance Letter.pdf
@@ -212,7 +214,7 @@
 
       <div id="f22.1" class="customSplit roundedCorners">
        <center>
-        <a href="#Microsoft_resume.pdf"  onclick="viewFile('22')">
+        <a href="#Microsoft_resume.pdf"  onclick="viewFile('22', true)">
          <img src="microsoft.png" width="37%" />
          <br />
          Microsoft resume.pdf
@@ -223,7 +225,7 @@
 
       <div id="f23.1" class="customSplit roundedCorners">
        <center>
-        <a href="#Microsoft_Internship_Declined.pdf"  onclick="viewFile('23')">
+        <a href="#Microsoft_Internship_Declined.pdf"  onclick="viewFile('23', true)">
          <img src="microsoft.png" width="37%" />
          <br />
          Microsoft Internship Declined.pdf
@@ -234,7 +236,7 @@
 
       <div id="f24.1" class="customSplit roundedCorners">
        <center>
-        <a href="#Apple_Job_Offer_Declined.pdf"  onclick="viewFile('24')">
+        <a href="#Apple_Job_Offer_Declined.pdf"  onclick="viewFile('24', true)">
          <img src="apple.jpg" width="20%" />
          <br />
          Apple Job Offer Declined.pdf
@@ -371,7 +373,7 @@
         <span>
        <div id="f24" class="customSplit roundedCorners">
         <center>
-         <a href="#Apple_Job_Offer_Declined.pdf"  onclick="viewFile('24')">
+         <a href="#Apple_Job_Offer_Declined.pdf"  onclick="viewFile('24', true)">
           <img src="apple.jpg" width="20%" />
           <br />
           Apple Job Offer Declined.pdf
@@ -382,7 +384,7 @@
 
        <div id="f23"  class="customSplit roundedCorners">
         <center>
-         <a href="#Microsoft_Internship_Declined.pdf" onclick="viewFile('23')">
+         <a href="#Microsoft_Internship_Declined.pdf" onclick="viewFile('23', true)">
           <img src="microsoft.png" width="37%" />
           <br />
           Microsoft Internship Declined.pdf
@@ -393,7 +395,7 @@
        </div>
        <div id="f22"class="customSplit roundedCorners">
         <center>
-         <a href="#Microsoft_resume.pdf"  onclick="viewFile('22')">
+         <a href="#Microsoft_resume.pdf"  onclick="viewFile('22', true)">
           <img src="microsoft.png" width="37%" />
           <br />
           Microsoft resume.pdf
@@ -403,7 +405,7 @@
        </div>
        <div id="f21" class="customSplit roundedCorners">
         <center>
-         <a href="#uoa_acceptance_letter.pdf"  onclick="viewFile('21')">
+         <a href="#uoa_acceptance_letter.pdf"  onclick="viewFile('21', true)">
           <img src="uoa_logo.svg" width="20%" />
           <br />
           UoA Acceptance Letter.pdf
@@ -414,9 +416,15 @@
       </span>
       </div>
     </div>
-    <br><br><br><br>
-    <a href="#" onclick="doShare('disclaimer1')">Disclaimer</a>
-
+    <br><br><br><br><br><br><br><br>
+    <a href="#" class="w3-bar-item w3-button w3-blue w3-button w3-hover-black w3-left-align group68button" onclick="doShare('disclaimer1')">Disclaimer</a>
+      <br>
+      The University of Auckland
+      <br>
+      Computer Science 345 - S1 2020 - Assignment 3
+      <br>
+      Murray Freeth-Edwards, Daniel Shen, Jonathon Leng
+      <br><br><br>
   </div>
 
   <div id="shared1" class="w3-container file">
@@ -518,13 +526,19 @@
         <p>Apple and the Apple logo is a registered trade mark of Apple INC</p>
         <p>No copyright is intended, the copyrighted works are used here solely for the purpose of education</p>
         <p>
-            Other logos from Wikipedia Commons:
+            Other logos from Wikipedia or Wikimedia Commons:
             <br><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ACSS3_logo_and_wordmark.svg&psig=AOvVaw1zXbWHPwryckDsfWI4pbG1&ust=1591344445174000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOiRl7_e5-kCFQAAAAAdAAAAABAQ">CSS Logo</a>
             <br><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AHTML5_logo_and_wordmark.svg&psig=AOvVaw2Xvc4XYaOWUxdeochBCcvd&ust=1591345417634000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNji9uTd5-kCFQAAAAAdAAAAABAD">HTML Logo</a>
             <br><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AJavaScript-logo.png&psig=AOvVaw2JQub6sRozbCbjYqxl1jEp&ust=1591346504217000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiA5urh5-kCFQAAAAAdAAAAABAD">JS Logo</a>
             <br><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AMicrosoft_Office_Excel_(2018%25E2%2580%2593present).svg&psig=AOvVaw0W72n_vEltYK91fCWCisQJ&ust=1591346541613000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPiI3Pzh5-kCFQAAAAAdAAAAABAD">Excel Logo</a>
             <br><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ALogo_Microsoft_Word.svg&psig=AOvVaw1huhIX8ZQAq98PspvuZP9f&ust=1591346565218000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDP74fi5-kCFQAAAAAdAAAAABAD">Word Logo</a>
             <br><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FJava_(programming_language)&psig=AOvVaw3yzPyjRWHN2i-5BHdDoANe&ust=1591346998187000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCsu9bj5-kCFQAAAAAdAAAAABAD">Java Logo</a>
+            <br><br>
+            The University of Auckland
+            <br>
+            Computer Science 345 - S1 2020 - Assignment 3
+            <br>
+            Murray Freeth-Edwards, Daniel Shen, Jonathon Leng
         </p>
         <hr />
     </div>
@@ -584,8 +598,14 @@
     }
   }
 
-  function viewFile(id) {
+  function viewFile(id, showShare = false) {
     delFile = id;
+
+    if(showShare) {
+        document.getElementById("viewFileShareButton").style = "";
+    }else{
+        document.getElementById("viewFileShareButton").style = "display: none;";
+    }
 
     console.log("Loading view for file " + id);
     if (id == 1) {
@@ -1294,6 +1314,12 @@
     console.log("Loading share known file");
     var name = document.getElementById("FileName").innerText;
     document.getElementById("ShareFileName").innerText = "Share '" + name + "'";
+    var key = Math.random().toString(36).substr(2, 32)
+    var link =  "https://cs345.auckland.ac.nz/share?" + key;
+    console.log(key);
+
+      document.getElementById("shareLink").innerText = link;
+      document.getElementById("shareLink").href = link;
     document.getElementById("id01").style.display = "block";
   }
 
