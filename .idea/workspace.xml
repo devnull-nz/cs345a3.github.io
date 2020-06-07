@@ -21,26 +21,31 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
+            <state relative-caret-position="394">
+              <caret line="1412" column="7" lean-forward="true" selection-start-line="1412" selection-start-column="7" selection-end-line="1412" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#input#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#4;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#21907#22331#0" />
-                <element signature="e#22357#127989#0" />
-                <element signature="e#128047#128955#0" />
-                <element signature="e#128979#129481#0" />
-                <element signature="e#129506#129760#0" />
-                <element signature="e#129785#129978#0" />
+                <element signature="e#25283#131027#0" />
+                <element signature="e#33567#38135#0" />
+                <element signature="e#38154#42947#0" />
+                <element signature="e#131813#132315#0" />
+                <element signature="e#132340#132765#0" />
+                <element signature="e#132790#132983#0" />
+                <element signature="e#133090#133391#0" />
+                <element signature="e#133415#134070#0" />
               </folding>
             </state>
           </provider>
@@ -50,14 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>override</find>
-      <find>trash1</find>
-      <find>draft f</find>
-      <find>message</find>
-      <find>Assignment 3</find>
-      <find>share</find>
-      <find>fileN</find>
-      <find>share file</find>
       <find>upload you</find>
       <find>FileNa</find>
       <find>f21</find>
@@ -71,15 +68,23 @@
       <find>oh.js</find>
       <find>dode</find>
       <find>compsci111</find>
-      <find>upload</find>
       <find>newCourseName</find>
       <find>newUserPopUpCourseName</find>
       <find>newUserCourseEmail</find>
       <find>addUserButton</find>
-      <find>id04</find>
-      <find>id01</find>
       <find>message...</find>
       <find>draft files</find>
+      <find>upload</find>
+      <find>share '</find>
+      <find>id01</find>
+      <find>var link</find>
+      <find>invite</find>
+      <find>id04</find>
+      <find>submit to</find>
+      <find>share</find>
+      <find>curCourseName</find>
+      <find>id05</find>
+      <find>canvasCourseName</find>
     </findStrings>
     <replaceStrings>
       <replace>.docx</replace>
@@ -143,7 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591143025437</updated>
       <workItem from="1591143028593" duration="26754000" />
-      <workItem from="1591329458142" duration="3690000" />
+      <workItem from="1591329458142" duration="8892000" />
     </task>
     <task id="LOCAL-00001" summary="update index">
       <created>1591144062976</created>
@@ -264,11 +269,25 @@
       <option name="project" value="LOCAL" />
       <updated>1591332037823</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="improved styling of modals">
+      <created>1591333354655</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1591333354655</updated>
+    </task>
+    <task id="LOCAL-00019" summary="hide share button on files already shared">
+      <created>1591498056922</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1591498056922</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30444000" />
+    <option name="totallyTimeSpent" value="35646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="992" extended-state="0" />
@@ -288,7 +307,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="11" side_tool="true" visible="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -317,7 +336,9 @@
     <MESSAGE value="added additional logo images" />
     <MESSAGE value="top corner refreshes page" />
     <MESSAGE value="added invite user functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="added invite user functionality" />
+    <MESSAGE value="improved styling of modals" />
+    <MESSAGE value="hide share button on files already shared" />
+    <option name="LAST_COMMIT_MESSAGE" value="hide share button on files already shared" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/fileIcon5.png">
@@ -337,26 +358,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
+        <state relative-caret-position="394">
+          <caret line="1412" column="7" lean-forward="true" selection-start-line="1412" selection-start-column="7" selection-end-line="1412" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#input#4;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#4;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#21907#22331#0" />
-            <element signature="e#22357#127989#0" />
-            <element signature="e#128047#128955#0" />
-            <element signature="e#128979#129481#0" />
-            <element signature="e#129506#129760#0" />
-            <element signature="e#129785#129978#0" />
+            <element signature="e#25283#131027#0" />
+            <element signature="e#33567#38135#0" />
+            <element signature="e#38154#42947#0" />
+            <element signature="e#131813#132315#0" />
+            <element signature="e#132340#132765#0" />
+            <element signature="e#132790#132983#0" />
+            <element signature="e#133090#133391#0" />
+            <element signature="e#133415#134070#0" />
           </folding>
         </state>
       </provider>

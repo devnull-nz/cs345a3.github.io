@@ -163,9 +163,42 @@
         <div class="w3-panel">
             <h5>Connect by email</h5>
             <input type="email" id="newUserCourseEmail" class="group68model" placeholder="jbon007@aucklanduni.ac.nz" max="200"/>
+            <br><br>Share this link for easy access:
+            <Br><a href="#" id="invitePersonLink"></a>
             <div class="w3-section">
                 <a class="w3-button w3-red group68button" onclick="document.getElementById('id04').style.display='none';">Cancel <i class="fa fa-remove"></i></a>
                 <a class="w3-button w3-right group68button" onclick="doNewUser()">Invite <i class="fa fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="id05" class="w3-modal" style="z-index: 4;">
+    <div class="w3-modal-content w3-animate-zoom group68model">
+        <div class="w3-container w3-padding">
+            <span onclick="document.getElementById('id05').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge group68button"><i class="fa fa-remove"></i></span>
+            <h2 id="CanvasFileName">Submit file</h2>
+        </div>
+        <div class="w3-panel">
+            <h6 id="canvasCourseName"></h6>
+            <h6>Select Assignment</h6>
+            <select class="group68model">
+                <option selected>Choose one</option>
+                <option>Abstract</option>
+                <option>Assignment 1</option>
+                <option>Assignment 2</option>
+                <option>Assignment 3</option>
+                <option>Final Report</option>
+                <option>Group Member Reviews</option>
+                <option>Presentation</option>
+            </select>
+            <br>
+            <br />
+            <br>
+            <input class="w3-input w3-border w3-margin-bottom group68button" style="height: 150px;" placeholder="Submission Comments..." />
+            <div class="w3-section">
+                <a class="w3-button w3-red group68button" onclick="document.getElementById('id05').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
+                <a class="w3-button  w3-right group68button" onclick="document.getElementById('id05').style.display='none'; alert('Submission successful!');">Submit to canvas <i class="fa fa-paper-plane"></i></a>
             </div>
         </div>
     </div>
@@ -186,7 +219,8 @@
     <h4 id="FileDate"><i class="fa fa-clock-o"></i> File 1, Sep 25, 2015.</h4>
     <a class="w3-button w3-light-grey" onclick="alert('The edit function is not within the scope of the home page')">Edit<i class="w3-margin-left fa fa-pencil-square-o"></i></a>
     <a id="viewFileShareButton" class="w3-button w3-light-grey" onclick="shareFile()">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
-    <a class="w3-button w3-light-grey" id="FileDelete" onclick="doDelete()">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
+      <a class="w3-button w3-light-grey" id="FileCanvas" onclick="doCanvasSubmission()">Submit To Canvas<i class="w3-margin-left fa fa-paper-plane"></i></a>
+      <a class="w3-button w3-light-grey" id="FileDelete" onclick="doDelete()">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
     <hr />
     <p id="FileText">
       insert stupid text here
@@ -203,7 +237,7 @@
       <span style="vertical-align: bottom;">
       <div id="f21.1" class="customSplit roundedCorners">
        <center>
-        <a href="#uoa_acceptance_letter.pdf"  onclick="viewFile('21', true)">
+        <a href="#uoa_acceptance_letter.pdf"  onclick="viewFile('21', true); curCourseName = 'Personal';">
          <img src="uoa_logo.svg" width="20%" />
          <br />
          UoA Acceptance Letter.pdf
@@ -214,7 +248,7 @@
 
       <div id="f22.1" class="customSplit roundedCorners">
        <center>
-        <a href="#Microsoft_resume.pdf"  onclick="viewFile('22', true)">
+        <a href="#Microsoft_resume.pdf"  onclick="viewFile('22', true); curCourseName = 'Personal';">
          <img src="microsoft.png" width="37%" />
          <br />
          Microsoft resume.pdf
@@ -225,7 +259,7 @@
 
       <div id="f23.1" class="customSplit roundedCorners">
        <center>
-        <a href="#Microsoft_Internship_Declined.pdf"  onclick="viewFile('23', true)">
+        <a href="#Microsoft_Internship_Declined.pdf"  onclick="viewFile('23', true); curCourseName = 'Personal'; ">
          <img src="microsoft.png" width="37%" />
          <br />
          Microsoft Internship Declined.pdf
@@ -236,7 +270,7 @@
 
       <div id="f24.1" class="customSplit roundedCorners">
        <center>
-        <a href="#Apple_Job_Offer_Declined.pdf"  onclick="viewFile('24', true)">
+        <a href="#Apple_Job_Offer_Declined.pdf"  onclick="viewFile('24', true); curCourseName = 'Personal';">
          <img src="apple.jpg" width="20%" />
          <br />
          Apple Job Offer Declined.pdf
@@ -254,27 +288,27 @@
       <div>
         <h5>COMPSCI111</h5>
 
-          <h6><a href="#" class="w3-button w3-white group68button" onclick="newUser('COMPSCI111', 'COMPSCI111_users')">Invite User</a> <span id="COMPSCI111_users">Daniel Shen</span></h6>
+          <h6><a href="#" class="w3-button w3-white group68button" onclick="newUser('COMPSCI111', 'COMPSCI111_users'); curCourseName = 'COMPSCI111';">Invite User</a> <span id="COMPSCI111_users">Daniel Shen</span></h6>
 
         <span>
        <div id="f3" class="customSplit roundedCorners">
         <center>
 
-         <a href="#" onclick="viewFile('3')"><img src="css.jpg" width="20%" /><br />crime.css</a>
+         <a href="#" onclick="viewFile('3'); curCourseName = 'COMPSCI111';"><img src="css.jpg" width="20%" /><br />crime.css</a>
           <br>January 15, 2020
         </center>
        </div>
        <div id="f1" class="customSplit roundedCorners">
         <center>
 
-         <a href="#"  onclick="viewFile('1')"><img src="js.png" width="14%" /><br />lay.js</a>
+         <a href="#"  onclick="viewFile('1'); curCourseName = 'COMPSCI111';"><img src="js.png" width="14%" /><br />lay.js</a>
             <br>April 1, 2001
         </center>
        </div>
        <div id="f2" class="customSplit roundedCorners">
         <center>
 
-         <a href="#"  onclick="viewFile('2')"><img src="html.png" width="13.5%" /><br />provoke.html</a>
+         <a href="#"  onclick="viewFile('2'); curCourseName = 'COMPSCI111';"><img src="html.png" width="13.5%" /><br />provoke.html</a>
             <br>November 5, 2008
         </center>
        </div>
@@ -290,14 +324,14 @@
        <div id="f4" class="customSplit roundedCorners">
         <center>
 
-         <a href="#"  onclick="viewFile('4')"><img src="excel.png" width="14%" /><br />cook.xlsx</a>
+         <a href="#"  onclick="viewFile('4'); curCourseName = 'COMPSCI210';"><img src="excel.png" width="14%" /><br />cook.xlsx</a>
             <br>August 2, 2009
         </center>
        </div>
        <div id="f5" class="customSplit roundedCorners">
         <center>
 
-         <a href="#"  onclick="viewFile('5')"><img src="word.svg" width="14%" /><br />strong.docx</a>
+         <a href="#"  onclick="viewFile('5'); curCourseName = 'COMPSCI210';"><img src="word.svg" width="14%" /><br />strong.docx</a>
             <br>August 22, 2011
         </center>
        </div>
@@ -313,28 +347,28 @@
        <div id="f9" class="customSplit roundedCorners">
         <center>
 
-         <a href="#"  onclick="viewFile('9')"><img src="word.svg" width="14%" /><br />behead.docx</a>
+         <a href="#"  onclick="viewFile('9'); curCourseName = 'ENGGEN120';"><img src="word.svg" width="14%" /><br />behead.docx</a>
             <br>June 3, 2016
         </center>
        </div>
        <div id="f8" class="customSplit roundedCorners">
         <center>
 
-         <a href="#"  onclick="viewFile('8')"><img src="excel.png" width="14%" /><br />decrease.csv</a>
+         <a href="#"  onclick="viewFile('8'); curCourseName = 'ENGGEN120';"><img src="excel.png" width="14%" /><br />decrease.csv</a>
             <br>March 17, 2016
         </center>
        </div>
        <div id="f6" class="customSplit roundedCorners">
         <center>
 
-         <a href="#"  onclick="viewFile('6')"><img src="word.svg" width="14%" /><br />ivory.odt</a>
+         <a href="#"  onclick="viewFile('6'); curCourseName = 'ENGGEN120';"><img src="word.svg" width="14%" /><br />ivory.odt</a>
             <br>March 17, 2015
         </center>
        </div>
        <div id="f7" class="customSplit roundedCorners">
         <center>
 
-         <a href="#"  onclick="viewFile('7')"><img src="js.png" width="14%" /><br />retire.json</a>
+         <a href="#"  onclick="viewFile('7'); curCourseName = 'ENGGEN120';"><img src="js.png" width="14%" /><br />retire.json</a>
             <br>March 1, 2016
         </center>
        </div>
@@ -359,7 +393,7 @@
         <div id="f11" class="customSplit roundedCorners">
           <center>
 
-            <a href="#"  onclick="viewFile('11')"><img src="excel.png" width="14%" /><br />acquisition.xls</a>
+            <a href="#"  onclick="viewFile('11'); curCourseName = 'INFOSYS222';"><img src="excel.png" width="14%" /><br />acquisition.xls</a>
               <br>December 13, 2016
           </center>
         </div>
@@ -373,7 +407,7 @@
         <span>
        <div id="f24" class="customSplit roundedCorners">
         <center>
-         <a href="#Apple_Job_Offer_Declined.pdf"  onclick="viewFile('24', true)">
+         <a href="#Apple_Job_Offer_Declined.pdf"  onclick="viewFile('24', true); curCourseName = 'Personal';">
           <img src="apple.jpg" width="20%" />
           <br />
           Apple Job Offer Declined.pdf
@@ -384,7 +418,7 @@
 
        <div id="f23"  class="customSplit roundedCorners">
         <center>
-         <a href="#Microsoft_Internship_Declined.pdf" onclick="viewFile('23', true)">
+         <a href="#Microsoft_Internship_Declined.pdf" onclick="viewFile('23', true); curCourseName = 'Personal';">
           <img src="microsoft.png" width="37%" />
           <br />
           Microsoft Internship Declined.pdf
@@ -395,7 +429,7 @@
        </div>
        <div id="f22"class="customSplit roundedCorners">
         <center>
-         <a href="#Microsoft_resume.pdf"  onclick="viewFile('22', true)">
+         <a href="#Microsoft_resume.pdf"  onclick="viewFile('22', true); curCourseName = 'Personal';">
           <img src="microsoft.png" width="37%" />
           <br />
           Microsoft resume.pdf
@@ -405,7 +439,7 @@
        </div>
        <div id="f21" class="customSplit roundedCorners">
         <center>
-         <a href="#uoa_acceptance_letter.pdf"  onclick="viewFile('21', true)">
+         <a href="#uoa_acceptance_letter.pdf"  onclick="viewFile('21', true); curCourseName = 'Personal';">
           <img src="uoa_logo.svg" width="20%" />
           <br />
           UoA Acceptance Letter.pdf
@@ -436,7 +470,7 @@
           <span>
               <div id="f12"class="customSplit roundedCorners">
                 <center>
-                  <a href="#"  onclick="viewFile('12')"><img src="js.png" width="14%" /><br />oh.js</a>
+                  <a href="#"  onclick="viewFile('12'); curCourseName = 'COMPSCI105';"><img src="js.png" width="14%" /><br />oh.js</a>
                     <br>April 30, 2017
                 </center>
               </div>
@@ -450,19 +484,19 @@
           <span>
             <div id="f14" class="customSplit roundedCorners">
               <center>
-                <a href="#"  onclick="viewFile('14')"><img src="word.svg" width="14%" /><br />partnership.pdf</a>
+                <a href="#"  onclick="viewFile('14'); curCourseName = 'COMPSCI105';"><img src="word.svg" width="14%" /><br />partnership.pdf</a>
                   <br>April 30, 2017
               </center>
             </div>
           <div id="f15" class="customSplit roundedCorners">
             <center>
-              <a href="#"  onclick="viewFile('15')"><img src="java.png" width="8%" /><br />retain.c</a>
+              <a href="#"  onclick="viewFile('15'); curCourseName = 'COMPSCI105';"><img src="java.png" width="8%" /><br />retain.c</a>
                 <br>April 30, 2017
             </center>
           </div>
           <div id="f13" class="customSplit roundedCorners">
             <center>
-              <a href="#"  onclick="viewFile('13')"><img src="java.png" width="8%" /><br />wonder.php</a>
+              <a href="#"  onclick="viewFile('13'); curCourseName = 'COMPSCI105';"><img src="java.png" width="8%" /><br />wonder.php</a>
                 <br>April 30, 2017
             </center>
           </div>
@@ -479,7 +513,7 @@
           <span>
               <div id="f16"class="customSplit roundedCorners">
                 <center>
-                  <a href="#"  onclick="viewFile('16')"><img src="java.png" width="8%" /><br />bad.java</a>
+                  <a href="#"  onclick="viewFile('16'); curCourseName = 'COMPSCI314';"><img src="java.png" width="8%" /><br />bad.java</a>
                     <br>December 29, 2018
                 </center>
               </div>
@@ -495,25 +529,25 @@
             <span>
               <div id="f17"class="customSplit roundedCorners">
                 <center>
-                  <a href="#"  onclick="viewFile('17')"><img src="word.svg" width="8%" /><br />bike.docx</a>
+                  <a href="#"  onclick="viewFile('17'); curCourseName = 'MATH105';"><img src="word.svg" width="8%" /><br />bike.docx</a>
                     <br>February 23, 2019
                 </center>
               </div>
                 <div id="f20"class="customSplit roundedCorners">
                 <center>
-                  <a href="#"  onclick="viewFile('20')"><img src="word.svg" width="8%" /><br />helicopter.jpeg</a>
+                  <a href="#"  onclick="viewFile('20'); curCourseName = 'MATH105';"><img src="word.svg" width="8%" /><br />helicopter.jpeg</a>
                     <br>November 23, 2020
                 </center>
               </div>
                 <div  id="f19"class="customSplit roundedCorners">
                 <center>
-                  <a href="#" onclick="viewFile('19')"><img src="excel.png" width="8%" /><br />hour.xlsx</a>
+                  <a href="#" onclick="viewFile('19'); curCourseName = 'MATH105';"><img src="excel.png" width="8%" /><br />hour.xlsx</a>
                     <br>February 26, 2020
                 </center>
               </div>
                 <div id="f18" class="customSplit roundedCorners">
                 <center>
-                  <a href="#"  onclick="viewFile('18')"><img src="word.svg" width="8%" /><br />ostracize.docx</a>
+                  <a href="#"  onclick="viewFile('18'); curCourseName = 'MATH105';"><img src="word.svg" width="8%" /><br />ostracize.docx</a>
                     <br>September 27, 2019
                 </center>
               </div>
@@ -545,6 +579,10 @@
 </div>
 
 <script>
+
+    var curCourseName = "";
+
+
   function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
@@ -1314,7 +1352,7 @@
     console.log("Loading share known file");
     var name = document.getElementById("FileName").innerText;
     document.getElementById("ShareFileName").innerText = "Share '" + name + "'";
-    var key = Math.random().toString(36).substr(2, 32)
+    var key = Math.random().toString(36).substr(2, 32);
     var link =  "https://cs345.auckland.ac.nz/share?" + key;
     console.log(key);
 
@@ -1340,6 +1378,12 @@
       document.getElementById("newUserPopUpCourseName").innerText = courseName;
       document.getElementById('id04').style.display='block';
 
+      var key = Math.random().toString(36).substr(2, 32);
+      var link =  "https://cs345.auckland.ac.nz/invite?" + key;
+      document.getElementById('invitePersonLink').innerText = link;
+      document.getElementById('invitePersonLink').href = link;
+
+
     return false;
   }
 
@@ -1356,6 +1400,13 @@
       }
 
       document.getElementById('id04').style.display='none';
+  }
+
+  function doCanvasSubmission(){
+      var name = document.getElementById("FileName").innerText;
+      document.getElementById("CanvasFileName").innerText = "Submit " + name + " to canvas";
+      document.getElementById('id05').style.display='block'
+      document.getElementById("canvasCourseName").innerText = curCourseName;
   }
 
 </script>
