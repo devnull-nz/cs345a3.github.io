@@ -18,7 +18,7 @@
       font-family: "RobotoDraft", "Roboto", sans-serif;
     }
     .w3-bar-block .w3-bar-item {
-      padding: 16px;
+      padding: 15px;
     }
   </style>
     <style>
@@ -45,22 +45,74 @@
         .nonRoundedEdgeButton {
           border-radius: 0 !important;
         }
+
+        .input-field {
+            height: 40px;
+            border-radius: 0;
+            width: 400px;
+            padding: 5px;
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background: #00457d;
+            position: fixed;
+            z-index: 11;
+            color: #fff;
+        }
+
+        .logo {
+          display: inline-block;
+          width: 50%;
+          height: 100%;
+          padding-left: 20px;
+          padding-top: 10px;
+        }
+
+        .login-details {
+          display: inline-block;
+          float: right;
+          color: #fff;
+          height: 100%;
+          width: 50%;
+          padding: 13px 20px 0 0;
+          text-align: right;
+        }
+
+        .logo h1 {
+          font-size: 28px;
+        }
     </style>
 </head>
 <body>
+
+<header>
+  <div class="logo">
+    <h1>UOA FILE SYSTEM
+  </div>
+
+  <div class="login-details">
+    <p>Logged In Joe Doe</p>
+  </div>
+</header>
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index: 3; width: 320px;" id="mySidebar">
   <a href="#" class="w3-bar-item w3-button w3-border-bottom w3-large" onclick="window.location.reload()">
-    <i class="fa fa-edit"></i> &nbsp; Group 68 File Server <br />
+    <br />
   </a>
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a><br>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-blue w3-button w3-hover-black w3-left-align group68button nonRoundedEdgeButton" onclick="document.getElementById('id02').style.display='block'">Upload <i class="w3-padding fa fa-upload"></i></a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-red  w3-button w3-hover-black w3-left-align group68button" onclick="document.getElementById('id03').style.display='block'">Add Course <i class="w3-padding fa fa-plus"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-red  w3-button w3-hover-black w3-left-align group68button nonRoundedEdgeButton" onclick="document.getElementById('id03').style.display='block'">Add Course <i class="w3-padding fa fa-plus"></i></a>
   <a href="#files" class="w3-bar-item w3-button" onclick=" console.log('shared mate'); doShare('files1');w3_close();"><i class="fa fa-inbox w3-margin-right"></i>Your Files</a>
   <a href="#shared" class="w3-bar-item w3-button" onclick=" console.log('shared mate'); doShare('shared1');w3_close();"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
   <a href="#draft" class="w3-bar-item w3-button" onclick=" console.log('draft mate'); doShare('draft1');w3_close();"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
   <a href="#trash" class="w3-bar-item w3-button" onclick=" console.log('trash mate'); doShare('trash1');w3_close();"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
 </nav>
+
+<div id="home" class="w3-container file">
+  asdfasd
+</div>
 
 <!-- Modal that pops up when you click on "Share File" -->
 <div id="id01" class="w3-modal" style="z-index: 4;">
@@ -162,7 +214,7 @@
         </div>
         <div class="w3-panel">
             <h5>Connect by email</h5>
-            <input type="email" id="newUserCourseEmail" class="group68model" placeholder="jbon007@aucklanduni.ac.nz" max="200"/>
+            <input type="email" id="newUserCourseEmail" class="group68model input-field" placeholder="jbon007@aucklanduni.ac.nz" max="200"/>
             <br><br>Share this link for easy access:
             <Br><a href="#" id="invitePersonLink"></a>
             <div class="w3-section">
@@ -224,7 +276,7 @@
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor: pointer;" title="Close Sidemenu" id="myOverlay"></div>
 
 <!-- Page content -->
-<div class="w3-main" style="margin-left: 320px;">
+<div class="w3-main" style="margin-left: 350px; padding-top: 80px;">
   <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
   <a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
 
