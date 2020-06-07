@@ -204,6 +204,22 @@
     </div>
 </div>
 
+<div id="id06" class="w3-modal" style="z-index: 4;">
+    <div class="w3-modal-content w3-animate-zoom group68model">
+        <div class="w3-container w3-padding">
+            <span onclick="document.getElementById('id06').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge group68button"><i class="fa fa-remove"></i></span>
+            <h2>Update Due Date</h2>
+        </div>
+        <div class="w3-panel">
+            <input id="dueDateInput" class="group68button">
+            <div class="w3-section">
+                <a class="w3-button w3-red group68button" onclick="document.getElementById('id06').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
+                <a class="w3-button  w3-right group68button" onclick="document.getElementById('id06').style.display='none'; doUpdateDueDate()">Update <i class="fa fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Overlay effect when opening the side navigation on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor: pointer;" title="Close Sidemenu" id="myOverlay"></div>
 
@@ -215,7 +231,8 @@
   <div id="File" class="w3-container file">
     <br />
     <img id="FileImg" class="w3-round w3-animate-top" src="./fileIcon3.png" style="width: 20%;" />
-    <h5 class="w3-opacity" id="FileName">File 1</h5>
+      <a href="#updateDueDate" onclick="updateDueDate()"><h5 class="w3-opacity">Due: <span id="FileDueDate">1970/01/01 @ 00:00</span></h5></a>
+      <div id="FileName" hidden></div>
     <h4 id="FileDate"><i class="fa fa-clock-o"></i> File 1, Sep 25, 2015.</h4>
     <a class="w3-button w3-light-grey" onclick="alert('The edit function is not within the scope of the home page')">Edit<i class="w3-margin-left fa fa-pencil-square-o"></i></a>
     <a id="viewFileShareButton" class="w3-button w3-light-grey" onclick="shareFile()">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
@@ -232,7 +249,7 @@
   <div id="files1" class="w3-container file">
     <br />
     <div id="recentFile">
-      <h4><i class="fa fa-inbox"></i> Recent Files</h4>
+      <h4><i class="fa fa-inbox"></i> Most Accessed Files</h4>
       <br />
       <span style="vertical-align: bottom;">
       <div id="f21.1" class="customSplit roundedCorners">
@@ -1408,6 +1425,15 @@
       document.getElementById('id05').style.display='block'
       document.getElementById("canvasCourseName").innerText = curCourseName;
   }
+
+    function updateDueDate(){
+        document.getElementById('id06').style.display='block';
+        document.getElementById('dueDateInput').value = document.getElementById('FileDueDate').innerText;
+    }
+
+    function doUpdateDueDate(){
+        document.getElementById('FileDueDate').innerText = document.getElementById('dueDateInput').value;
+    }
 
 </script>
 </body>
