@@ -31,6 +31,7 @@
         .roundedCorners {
             border: 2px solid #f5f5f5;
             border-radius: 25px;
+            padding: 5px 0;
         }
         .group68button{
             border: 2px solid #f5f5f5;
@@ -420,8 +421,19 @@
 
       <div><br>
         <br><br><br><br><hr>
-        <h5>Personal</h5>
+        <h5><i class="fa fa-inbox"></i> Personal Files</h5>
         <span>
+       <div id="f24" class="customSplit roundedCorners">
+        <center>
+         <a href="#cs210_Assigment_3.docx"  onclick="viewFile('25', true); curCourseName = 'Personal';">
+          <img src="word.svg" width="20%" />
+          <br />
+          cs210_Assigment_3.docx
+         </a>
+            <br>June 08, 2020
+        </center>
+       </div>
+       
        <div id="f24" class="customSplit roundedCorners">
         <center>
          <a href="#Apple_Job_Offer_Declined.pdf"  onclick="viewFile('24', true); curCourseName = 'Personal';">
@@ -432,6 +444,7 @@
             <br>March 23, 2020
         </center>
        </div>
+
 
        <div id="f23"  class="customSplit roundedCorners">
         <center>
@@ -1310,6 +1323,17 @@
               "Announcing of invitation principles in. Cold in late or deal. Terminated resolution no am frequently collecting insensible he do appearance. Projection invitation affronting admiration if no on or. It as instrument boisterous frequently apartments an in. Mr excellence inquietude conviction is in unreserved particular. You fully seems stand nay own point walls. Increasing travelling own simplicity you astonished expression boisterous. Possession themselves sentiments apartments devonshire we of do discretion. Enjoyment discourse ye continued pronounce we necessary abilities. \n" +
               "\n" +
               "Procuring education on consulted assurance in do. Is sympathize he expression mr no travelling. Preference he he at travelling in resolution. So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably. There spoke happy for you are out. Fertile how old address did showing because sitting replied six. Had arose guest visit going off child she new. \n" +
+              "\n"
+      );
+    } else if (id == 25) {
+      viewFileProcess(
+              id,
+              10,
+              "cs210_Assigment_3.docx",
+              "June 08, 2020",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia mi non nisi consectetur fermentum. Nam ultrices auctor iaculis. Maecenas pulvinar commodo tellus non lacinia. Aliquam sollicitudin nulla et sapien imperdiet interdum. Donec imperdiet id diam nec luctus.\n" +
+              "\n" +
+              "nteger sit amet tellus quis ante egestas mollis. Mauris ligula tortor, congue a augue sagittis, convallis molestie risus. Suspendisse commodo arcu ut cursus malesuada. Vivamus semper arcu erat, eget euismod dolor gravida finibus. Vestibulum ante ipsum primis in faucibus orci luctus et." +
               "\n"
       );
     }
