@@ -238,6 +238,7 @@
     <a class="w3-button w3-light-grey" onclick="alert('The edit function is not within the scope of the home page')">Edit<i class="w3-margin-left fa fa-pencil-square-o"></i></a>
     <a id="viewFileShareButton" class="w3-button w3-light-grey" onclick="shareFile()">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
       <a class="w3-button w3-light-grey" id="FileCanvas" onclick="doCanvasSubmission()">Submit To Canvas<i class="w3-margin-left fa fa-paper-plane"></i></a>
+      <a class="w3-button w3-light-grey" id="FilePublish" onclick="doPublish()" style="display: none">Publish to course<i class="w3-margin-left fa fa-arrow-up"></i></a>
       <a class="w3-button w3-light-grey" id="FileDelete" onclick="doDelete()">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
     <hr />
     <p id="FileText">
@@ -511,7 +512,7 @@
 
       <div>
     <h5>COMPSCI314 (<b>Jonathon Leng</b>, Jodie Dodd, Mollie Jennings, Archie Higgins)</h5>
-          <span>
+          <span id="cs314span">
             <div id="f14" class="customSplit roundedCorners">
               <center>
                 <a href="#"  onclick="viewFile('14'); curCourseName = 'COMPSCI105';"><img src="word.svg" width="14%" /><br />partnership.pdf</a>
@@ -538,9 +539,9 @@
   <div id="draft1" class="w3-container file">
     <br />
     <h4><i class="fa fa-hourglass-end"></i> Draft Files</h4>
-      <div>
+      <div id="cs314DraftDiv">
           <h5>COMPSCI314</h5>
-          <span>
+          <span id="cs314DraftSpan">
               <div id="f16"class="customSplit roundedCorners">
                 <center>
                   <a href="#"  onclick="viewFile('16'); curCourseName = 'COMPSCI314';"><img src="java.png" width="8%" /><br />bad.java</a>
@@ -611,7 +612,7 @@
 <script>
 
     var curCourseName = "";
-
+    var doc16published = false;
 
   function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
@@ -674,6 +675,8 @@
     }else{
         document.getElementById("viewFileShareButton").style = "display: none;";
     }
+
+      showPublish = false;
 
     console.log("Loading view for file " + id);
     if (id == 1) {
@@ -1082,6 +1085,8 @@
               "\n"
       );
     } else if (id == 16) {
+
+        showPublish = true;
       viewFileProcess(
               id,
               11,
@@ -1369,6 +1374,13 @@
     document.getElementById("FileDate").innerText = name + " -  " + date;
     document.getElementById("FileText").innerText = text;
 
+
+    if(showPublish && !doc16published) {
+        document.getElementById("FilePublish").style.display = 'inline';
+    }else{
+        document.getElementById("FilePublish").style.display = 'none';
+    }
+
     doShare("File");
   }
 
@@ -1459,6 +1471,14 @@
         document.getElementById('FileDueDate').innerText = document.getElementById('dueDateInput').value;
     }
 
+    function doPublish(){
+        doc16published = true
+        console.log("publishing bad.java");
+        document.getElementById("cs314span").innerHTML += document.getElementById("cs314DraftSpan").innerHTML;
+        document.getElementById("cs314DraftDiv").innerHTML = "";
+        alert("bad.java published to COMPSCI314")
+        doShare("shared1");
+    }
 </script>
 </body>
 </html>
